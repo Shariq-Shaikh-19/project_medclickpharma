@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 function FAQ() {
-const [openMenu, setOpenMenu] = useState(null);
-const [openFaq, setOpenFaq] = useState(null);
+  const [openMenu, setOpenMenu] = useState(null);
+  const [openFaq, setOpenFaq] = useState(null);
   const menuRef = useRef(null);
 
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
   const toggleFaq = (faqId) => {
-  setOpenFaq(openFaq === faqId ? null : faqId);
-};
+    setOpenFaq(openFaq === faqId ? null : faqId);
+  };
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -165,7 +165,7 @@ const [openFaq, setOpenFaq] = useState(null);
 
   return (
     <div>
-     {/*----------------------------------------------------------------------------- */}
+      {/*----------------------------------------------------------------------------- */}
       {/* Fix WaterMark  */}
       <div className="fixed inset-0 flex items-center justify-center pointer-events-none select-none z-0">
         <img
@@ -368,7 +368,8 @@ const [openFaq, setOpenFaq] = useState(null);
             </li>
 
             <li>
-              <Link to ="/Weightloss"
+              <Link
+                to="/Weightloss"
                 href="#"
                 className="text-sm font-semibold whitespace-nowrap hover:text-[#D4F0E0] "
               >
@@ -377,7 +378,8 @@ const [openFaq, setOpenFaq] = useState(null);
             </li>
 
             <li>
-              <Link to ="/Steroid"
+              <Link
+                to="/Steroid"
                 href="#"
                 className="text-sm font-semibold whitespace-nowrap hover:text-[#D4F0E0] "
               >
@@ -386,7 +388,8 @@ const [openFaq, setOpenFaq] = useState(null);
             </li>
 
             <li>
-              <Link to = "/SleepingPills"
+              <Link
+                to="/SleepingPills"
                 href="#"
                 className="text-sm font-semibold whitespace-nowrap hover:text-[#D4F0E0] "
               >
@@ -395,7 +398,8 @@ const [openFaq, setOpenFaq] = useState(null);
             </li>
 
             <li>
-              <Link to ="/Modafinil_Armodafinil"
+              <Link
+                to="/Modafinil_Armodafinil"
                 href="#"
                 className="text-sm font-semibold whitespace-nowrap hover:text-[#D4F0E0] "
               >
@@ -404,7 +408,8 @@ const [openFaq, setOpenFaq] = useState(null);
             </li>
 
             <li>
-              <Link to = "/Antiviral_Antibiotic"
+              <Link
+                to="/Antiviral_Antibiotic"
                 href="#"
                 className="text-sm font-semibold whitespace-nowrap hover:text-[#D4F0E0] "
               >
@@ -434,43 +439,48 @@ const [openFaq, setOpenFaq] = useState(null);
 
               {openMenu === "other" && (
                 <div className="absolute left-0 right-0 top-full mt-3.5 w-52 bg-white text-gray-700 rounded-lg divide-y divide-gray-100 shadow-xl border border-gray-200 z-50 overflow-hidden">
-                  <Link to ="/HairLossTreatment"
+                  <Link
+                    to="/HairLossTreatment"
                     href="#"
                     className="hover:text-amber-600 block px-5 py-2.5 text-sm hover:bg-gray-100"
                   >
                     Hair Loss Treatment
                   </Link>
-                  <Link to="/SkinCreame"
+                  <Link
+                    to="/SkinCreame"
                     href="#"
                     className="hover:text-amber-600 block px-5 py-2.5 text-sm hover:bg-gray-100"
                   >
                     Skin Cream
                   </Link>
-                  <Link to = "/EyeEarDrops"
+                  <Link
+                    to="/EyeEarDrops"
                     href="#"
                     className="hover:text-amber-600 block px-5 py-2.5 text-sm hover:bg-gray-100"
                   >
                     Eye-Ear-Drops
                   </Link>
-                  <Link to="/KamagraAllRange"
+                  <Link
+                    to="/KamagraAllRange"
                     href="#"
                     className="hover:text-amber-600 block px-5 py-2.5 text-sm hover:bg-gray-100"
                   >
                     Kamagra All Range
                   </Link>
-                  <Link to="/BestSeller"
-                    
+                  <Link
+                    to="/BestSeller"
                     className="hover:text-amber-600 block px-5 py-2.5 text-sm hover:bg-gray-100"
                   >
                     Best Seller
                   </Link>
-                  <Link to ="/OtherProducts"
-                   
+                  <Link
+                    to="/OtherProducts"
                     className="hover:text-amber-600 block px-5 py-2.5 text-sm hover:bg-gray-100"
                   >
                     Others Products
                   </Link>
-                  <Link to ="/DropShipping"
+                  <Link
+                    to="/DropShipping"
                     href="#"
                     className="hover:text-amber-600 block px-5 py-2.5 text-sm hover:bg-gray-100"
                   >
@@ -480,11 +490,10 @@ const [openFaq, setOpenFaq] = useState(null);
               )}
             </li>
           </ul>
-          
         </div>
       </nav>
 
-{/* Main Section Start */}
+      {/* Main Section Start */}
       <main className="flex-1 relative z-10">
         <div className=" py-20 px-6">
           <div className="text-center mb-14 opacity-100 transform-none">
@@ -531,7 +540,8 @@ const [openFaq, setOpenFaq] = useState(null);
                 </div>
 
                 {/* Answer */}
-                {openMenu === faq.id && (
+
+                {openFaq === faq.id && (
                   <div className="mt-4 text-gray-600 text-lg">{faq.answer}</div>
                 )}
               </div>
