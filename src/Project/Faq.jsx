@@ -2,11 +2,15 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 function FAQ() {
 const [openMenu, setOpenMenu] = useState(null);
+const [openFaq, setOpenFaq] = useState(null);
   const menuRef = useRef(null);
 
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
+  const toggleFaq = (faqId) => {
+  setOpenFaq(openFaq === faqId ? null : faqId);
+};
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -505,7 +509,7 @@ const [openMenu, setOpenMenu] = useState(null);
               >
                 {/* Question row */}
                 <div
-                  onClick={() => toggleMenu(faq.id)}
+                  onClick={() => toggleFaq(faq.id)}
                   className="flex justify-between items-center cursor-pointer"
                 >
                   <h3 className="text-xl font-semibold text-gray-900">
@@ -514,7 +518,7 @@ const [openMenu, setOpenMenu] = useState(null);
                   <button className="cursor-pointer">
                     <span
                       className={`inline-block transition-transform ${
-                        openMenu === faq.id ? "rotate-180" : ""
+                        openFaq === faq.id ? "rotate-180" : ""
                       }`}
                     >
                       <img
