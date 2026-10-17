@@ -541,9 +541,19 @@ function FAQ() {
 
                 {/* Answer */}
 
-                {openFaq === faq.id && (
-                  <div className="mt-4 text-gray-600 text-lg">{faq.answer}</div>
-                )}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    openFaq === faq.id
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="mt-4 text-gray-600 text-lg">
+                      {faq.answer}
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
