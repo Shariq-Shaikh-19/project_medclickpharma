@@ -515,10 +515,10 @@ function FAQ() {
               <div
                 key={faq.id}
                 className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 cursor-pointer hover:shadow-xl transition opacity-100 transform-none origin-center"
+                onClick={() => toggleFaq(faq.id)}
               >
                 {/* Question row */}
                 <div
-                  onClick={() => toggleFaq(faq.id)}
                   className="flex justify-between items-center cursor-pointer"
                 >
                   <h3 className="text-xl font-semibold text-gray-900">
